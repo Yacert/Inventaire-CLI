@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventaire Informatique</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1e1e2e; color: #cdd6f4; }
+        h1 { text-align: center; color: #89b4fa; }
+        table { width: 90%; margin: auto; border-collapse: collapse; }
+        th { background: #313244; padding: 10px; }
+        td { padding: 8px; text-align: center; border-bottom: 1px solid #45475a; }
+        .actif { color: #a6e3a1; }
+        .panne { color: #f38ba8; }
+        .stock { color: #f9e2af; }
+        .stats { text-align: center; margin: 20px; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <h1>🖥️ Dashboard Inventaire</h1>
+    <div class="stats">
+        <p>Total équipements : <strong>8</strong></p>
+        <p>En panne : <strong class="panne">2</strong></p>
+    </div>
+    <table>
+        <tr><th>ID</th><th>Type</th><th>Marque</th><th>IP</th><th>Statut</th></tr>
+        <tr><td>1778178329</td><td>PC</td><td>Dell</td><td>192.168.1.10</td><td class='actif'>Actif</td></tr><tr><td>1778178608</td><td>Serveur</td><td>HP</td><td>192.168.1.20</td><td class='stock'>En Stock</td></tr><tr><td>1778185616</td><td>PC</td><td>Lenovo</td><td>192.168.1.11</td><td class='actif'>Actif</td></tr><tr><td>1778185668</td><td>Serveur</td><td>Dell</td><td>192.168.1.21</td><td class='panne'>En Panne</td></tr><tr><td>1778185731</td><td>Imprimante</td><td>HP</td><td>192.168.1.31</td><td class='stock'>En Stock</td></tr><tr><td>1778185822</td><td>PC</td><td>Asus</td><td>192.168.1.12</td><td class='stock'>En Stock</td></tr><tr><td>1778185881</td><td>Serveur</td><td>Lenovo</td><td>192.168.1.22</td><td class='actif'>Actif</td></tr><tr><td>1778185985</td><td>Imprimante</td><td>Canon</td><td>192.168.1.32</td><td class='panne'>En Panne</td></tr>
+    </table>
+</body>
+</html>

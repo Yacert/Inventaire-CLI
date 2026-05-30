@@ -1,0 +1,36 @@
+#!/bin/bash
+
+source config/theme.conf
+
+case $1 in
+    add)
+        bash scripts/create_asset.sh
+        ;;
+    ls)
+        bash scripts/display_assets.sh --mode $3
+        ;;
+    status)
+        echo -e "${YELLOW}ID : $2 | Nouveau statut : $3${NC}"
+        sed -i "s/^$2,\(.*\),.*$/$2,\1,$3/" db/assets.csv
+        echo -e "${GREEN}✅ Statut mis à jour !${NC}"
+        ;;
+    rm)
+        bash scripts/delete_asset.sh $2
+        ;;
+    search)
+        echo -e "${BLUE}=== Recherche : $2 ===${NC}"
+        grep "$2" db/assets.csv || echo -e "${RED}❌ Aucun résultat trouvé.${NC}"
+        ;;
+    --help|*)
+        echo -e "${BLUE}==============================${NC}"
+        echo -e "${BLUE}   Inventaire Informatique    ${NC}"
+        echo -e "${BLUE}==============================${NC}"
+        echo -e "${GREEN}inv add${NC}                  Ajouter un équipement"
+        echo -e "${GREEN}inv ls --mode console${NC}    Afficher en terminal"
+        echo -e "${GREEN}inv ls --mode browser${NC}    Générer le dashboard web"
+        echo -e "${GREEN}inv status ID Statut${NC}     Modifier le statut"
+        echo -e "${GREEN}inv rm ID${NC}                Supprimer un équipement"
+        echo -e "${GREEN}inv search IP${NC}            Rechercher un équipement"
+        echo -e "${BLUE}==============================${NC}"
+        ;;
+esac

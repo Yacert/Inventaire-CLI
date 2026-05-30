@@ -1,0 +1,9 @@
+ID, Type, Marque, IP, Statut
+1778178329,PC,Dell,192.168.1.10,Actif
+1778178608,Serveur,HP,192.168.1.20,En Stock
+1778185616,PC,Lenovo,192.168.1.11,Actif
+1778185668,Serveur,Dell,192.168.1.21,En Panne
+1778185731,Imprimante,HP,192.168.1.31,En Stock
+1778185822,PC,Asus,192.168.1.12,En Stock
+1778185881,Serveur,Lenovo,192.168.1.22,Actif
+1778185985,Imprimante,Canon,192.168.1.32,En Panne
